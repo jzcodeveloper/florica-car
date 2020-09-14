@@ -10,7 +10,7 @@ const VehicleLocation = ({ vehicle }) => {
   return (
     <Container>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyBv1DvxtirK_uuRYkVyvgwvDNxW3AUBlIw" }}
+        bootstrapURLKeys={{ key: process.env.GOOGLE_API_KEY }}
         defaultCenter={center}
         defaultZoom={zoom}
       />
