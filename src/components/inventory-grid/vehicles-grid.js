@@ -16,16 +16,11 @@ import {
 import { features } from "./data";
 
 const VehiclesGrid = ({ vehicle }) => {
-  const url =
-    process.env.NODE_ENV !== "development"
-      ? vehicle.gallery[0].url
-      : process.env.REACT_APP_BACKEND_URL + vehicle.gallery[0].url;
-
   return (
     <Container>
       <StyledLink to={`/inventory/${vehicle.slug}`}>
         <Image
-          src={url}
+          src={vehicle.gallery[0].url}
           alt={vehicle.gallery[0].alternativeText}
           caption={vehicle.gallery[0].caption}
         />

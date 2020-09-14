@@ -17,16 +17,11 @@ import {
 const ArticlesGrid = ({ article }) => {
   const { locale } = useIntl();
 
-  const url =
-    process.env.NODE_ENV !== "development"
-      ? article.image.url
-      : process.env.REACT_APP_BACKEND_URL + article.image.url;
-
   return (
     <Container>
       <StyledLink to={`/blog/${article.slug}`}>
         <Image
-          src={url}
+          src={article.image.url}
           alt={article.image.alternativeText}
           caption={article.image.caption}
         />

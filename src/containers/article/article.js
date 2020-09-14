@@ -36,13 +36,7 @@ const Article = () => {
 
   return (
     <Container>
-      <Banner
-        src={
-          process.env.NODE_ENV !== "development"
-            ? data.articles[0].image.url
-            : process.env.REACT_APP_BACKEND_URL + data.articles[0].image.url
-        }
-      >
+      <Banner src={data.articles[0].image.url}>
         <Title>{data.articles[0].title}</Title>
         <Date>
           <Icon className="fas fa-calendar-alt" />
